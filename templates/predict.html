@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Predict - Iris Classifier{% endblock %}
+
+{% block content %}
+<style>
+    .form-container {
+        max-width: 500px;
+        margin: 40px auto;
+        padding: 30px;
+        background-color: #f9f9f9;
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        width: 100%;
+        margin: 10px 0;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    h2 {
+        color: #333;
+        margin-bottom: 25px;
+    }
+</style>
+
+<div class="form-container text-center">
+    <h2>🌿 Enter Flower Measurements (in cm)</h2>
+    <form action="/predict" method="post">
+        <input type="text" name="sepal_length" placeholder="Sepal Length (cm)" required><br>
+        <input type="text" name="sepal_width" placeholder="Sepal Width (cm)" required><br>
+        <input type="text" name="petal_length" placeholder="Petal Length (cm)" required><br>
+        <input type="text" name="petal_width" placeholder="Petal Width (cm)" required><br><br>
+        <input type="submit" value="Predict">
+    </form>
+</div>
+{% endblock %}

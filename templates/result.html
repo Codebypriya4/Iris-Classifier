@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Prediction Result{% endblock %}
+
+{% block content %}
+    <div class="text-center mt-5">
+        <h2 class="mb-4">🌸 Predicted Iris Flower Species:</h2>
+        <h3 class="text-primary">{{ prediction }}</h3>
+
+        <div class="mt-4">
+            <a href="/predict" class="btn btn-success me-2">🔁 Try Another</a>
+            <a href="/" class="btn btn-outline-primary">🏠 Go to Home</a>
+        </div>
+    </div>
+{% endblock %}

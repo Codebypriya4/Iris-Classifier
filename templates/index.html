@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Iris Classifier{% endblock %}
+
+{% block content %}
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: url("https://images.unsplash.com/photo-1501004318641-b39e6451bec6") no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        animation: fadeIn 2s ease-in;
+    }
+
+    .header {
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        padding: 60px 20px;
+        text-align: center;
+        border-radius: 10px;
+        margin: 50px auto;
+        max-width: 800px;
+        animation: slideIn 1.5s ease-out;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .header h1 {
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    .header p {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .main-content {
+        text-align: center;
+        color: white;
+        animation: fadeIn 2.5s ease-in;
+    }
+
+    .main-content p {
+        font-size: 20px;
+        background: rgba(0, 0, 0, 0.5);
+        display: inline-block;
+        padding: 15px 25px;
+        border-radius: 10px;
+        margin-top: 30px;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @keyframes slideIn {
+        from { transform: translateY(-40px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+</style>
+
+<div class="header">
+    <h1>Hello User🌼</h1>
+    <p>Effortlessly identify Iris flower species using Artificial Intelligence</p>
+</div>
+
+<div class="main-content">
+    <p>Use the navigation bar to get started with predictions, explore flower types, or learn more about this app.</p>
+</div>
+{% endblock %}
